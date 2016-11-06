@@ -163,6 +163,9 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
       return opRet && opRet.replace(/&#34;/g, '\"') // .substring(3)
   }
 
+  
+  // totally optional
+  //
   opReturns = opReturns.map((opr) => {
       return {
         op_return: cleanOpReturn(opr),
@@ -185,6 +188,8 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
 
   if (SHOW_OPRS) c.log("OP_RETURNS:", opReturns, "---")
 
+  
+  
   // module.exports = opReturns
 
   // callback(opReturns)
