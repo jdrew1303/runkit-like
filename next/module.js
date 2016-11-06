@@ -70,10 +70,9 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
 
 // uncomment this block to run in node
 //
-(async function() {
+(async function() { // TODO: try with this, it should work: (async () => {
 
-  // this block can run in runkit
-
+  // this block can run in runkit without the async function
 
   if (DEBUG) c.log(`URL: ${url_addr}`)
   const resp = await http.get(url_addr)
@@ -138,6 +137,7 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
   })
 
   // additional debug
+  //
   if (DEBUG) {
     c.log("OP_RETURNS:\n", op_returns)
     c.log(JSON.stringify(op_returns))
@@ -149,14 +149,16 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
 
 
   // this comments are way to add caching to the requests above
-
+  //
   // first option - local require
   // let blockcypher_op_returns = require("./blockcypher-opreturn")
   // let blockcypher_op_returns = fs.readFileSync("./op_returns.json").toString()
   // blockcypher_op_returns = JSON.parse(blockcypher_op_returns)
   // blockcypher_op_returns = blockcypher_op_returns.op_returns
 
+  
   // let opReturns = blockcypher_op_returns
+  //
   let opReturns = op_returns
 
   const cleanOpReturn = (opRet) => {
@@ -188,22 +190,27 @@ const url_addr      = `https://${url_base}/${endpoint_addr}`;
 
   if (SHOW_OPRS) c.log("OP_RETURNS:", opReturns, "---")
 
-  
-  
   // module.exports = opReturns
-
+  //
   // callback(opReturns)
-
+  
+  
+  // if you call runkit-like-module.js
+  //
   c.log(opReturns)
+  
+  
+  // code for running this module/script in runkit (runkit.com / runkit.io)
+// ----------------------------------
+  //
   // return opReturns
-
+  //
 // }
-
-
+//
 // module.exports = main
-
+//
 // true
-
+//
 // let ret = await main()
 // c.log(ret)
 
