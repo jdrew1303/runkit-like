@@ -1,3 +1,2 @@
-babel runkit.js > dist/runkit.js && \
-babel blockcypher-opreturn.js > dist/blockcypher-opreturn.js && \
-node dist/runkit.js
+babel check_op_return.js > dist/check_op_return.js && \
+node dist/check_op_return.js
