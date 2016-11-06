@@ -1,0 +1,4 @@
+
+babel module.js > dist/module.js && \
+
+node dist/module.js

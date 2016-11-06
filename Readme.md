@@ -1,10 +1,13 @@
-# Runkit like
+# Runkit-like
 
-### Runkit environment
+runkit-like environment
 
-Simple boilerplate (10-20 lines?) to have a runkit like experience (and copy paste into runnkit too)
+take a look at `./next/Readme.md`
+
+
+----
+
+##### current features:
 
 - babelify
 - async by default
-
-TODO: module.export to auto-deploy an endpoint + auto publish a gist
